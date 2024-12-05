@@ -31,12 +31,27 @@ void vector2_tests() {
   std::cout << "Angle between " << vGlobal << " and " << vCustom << " = " << vGlobal.angleWith(vCustom) << std::endl;
   std::cout << "Angle between " << vCustom<< " and " << vDefault<< " = " << vCustom.angleWith(vDefault) << std::endl;
 
+  std::cout << vDefault << " normalized = " << vDefault.normalize() << std::endl;
+  std::cout << vGlobal << " normalized = " << vGlobal.normalize() << std::endl;
+  std::cout << vCustom << " normalized = " << vCustom.normalize() << std::endl;
+
 }
 
 void vector3_tests() {
   std::cout << "----------Starting Vec3 Tests-----------" << std::endl;
-  Vec3 tmp;
-  std::cout << "Default Vec3 values when not assigned, x: " << tmp.x() << ", y: " << tmp.y() << ", z: " << tmp.z() << std::endl;
+  Vec3 vDefault;
+  Vec3 vGlobal(12.2);
+  Vec3 vCustom(15.2, 4, 0.1);
+  std::cout << "Default Vec3 " << vDefault << std::endl;
+  std::cout << "Global Vec3 " << vGlobal << std::endl;
+  std::cout << "Custom Vec3 " << vCustom << std::endl;
+
+  std::cout << "Len of " << vDefault << " = " << vDefault.len() << std::endl;
+  std::cout << "Len of " << vGlobal << " = " << vGlobal.len() << std::endl;
+  std::cout << "Len of " << vCustom << " = " << vCustom.len() << std::endl;
+
+  std::cout << "Dot product of " << vDefault << " & " << vGlobal << " = " << vDefault.dotProduct(vGlobal) << std::endl;
+  std::cout << "Dot product of " << vGlobal << " & " << vCustom<< " = " << vGlobal.dotProduct(vCustom) << std::endl;
 }
 
 void transform_tests() {
