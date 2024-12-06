@@ -157,7 +157,7 @@ bool Vec3::operator==(const Vec3 &src) const {
 }
 
 std::ostream &operator<<(std::ostream &os, const Vec3 &src) {
-  os << "(" << src.x() << ", " << src.y() << ", " << src.z() << ")";
+  os << "(x: " << src.x() << ", y: " << src.y() << ", z: " << src.z() << ")";
   return os;
 }
 
